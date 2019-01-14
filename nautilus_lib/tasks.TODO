@@ -1,0 +1,42 @@
+
+Single Agent object Transport:
+
+Planner:
+ ✔ Construir elementos do ambiente de trabalhos: @done (15-06-12 12:10)
+   ✔ Workspace @done (15-06-12 12:10)
+   ✔ Thing @done (15-06-12 12:10)
+   ✔ Robot @done (15-06-12 12:10)
+ ✔ Planejador Abstratro @done (15-06-12 13:53)
+   O mesmo deve receber somente o mapa e os pontos de origem e destino, ser generico suficiente para trabalhar, seja com os robos, seja com os objetos
+ ✔ Visualizador de dados @done (15-06-12 12:13)
+   ✔ Mapa @done (15-06-12 12:13)
+   ✔ Test Case @done (15-06-12 12:13)
+   ✔ Mapa com Path @done (15-06-12 12:13)
+ ✔ Analisador @done (15-06-13 00:07)
+   ✔ Criar segmentos de um plano @done (15-06-13 00:07)
+   ✔ Calcular o custo de cada segmento @done (15-06-13 00:07)
+ ✔ Criar pilha de planos para o conjunto de objetos @done (15-06-13 17:49)
+    ✔ Leitor de JSON @done (15-06-13 17:08)
+    ✔ Planejar todos os objetos @done (15-06-13 17:33)
+    ✔ Mostrar todos os planos gerados @done (15-06-13 17:35)
+ ☐ Criar planos para robos
+   ☐ Criar movimentação (animação para o robo)
+ ✔ Plot de texto no matplotlib @done (15-06-13 00:43)
+
+ ☐ Executor Simples
+   ✔ Definir uma ordem de transporte @done (15-06-13 20:33)
+   ✔ Planejar plano para o objeto @done (15-06-13 20:33)
+   ✔ Executar o transporte pelos segmentos @done (15-06-13 20:45)
+   ✔ Repetir ate transportar todos @done (15-06-13 20:45)
+   ✔ Calcular o custo total: @done (15-06-13 22:46)
+      ✔ Movimentação do objeto + movimentação do robo @done (15-06-13 22:46)
+   ✔ Criar posição do robo baseado no movimento do objeto @done (15-06-13 22:00)
+   ✔ Considerar demais objetos como obstaculo @done (15-06-13 20:45)
+
+ ✔ Como adicionar a posição de mudança de ação sem deixar de ser um planejador abstrato ? @done (15-06-14 18:05)
+
+ ☐ Executor Metodo 2
+   ✔ Planejar plano para cada objeto @done (15-06-15 00:14)
+   ✔ Escolher o melhor segmento para ser executado @done (15-06-15 00:14)
+     - Segmento aquele com menor custo total de movimentação e que seja possível ser realizado somando com o valor de movimentação do robo para realiza-lo, escolher o 'melhor' (com menor custo)
+   ✔ Repetir ate que todos os segmentos sejam realizados @done (15-06-15 00:14)

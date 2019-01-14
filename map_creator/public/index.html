@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MapCreator</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <div id="content">
+    <canvas id="page">
+    </canvas>
+    <div id="grid">
+    </div>
+  </div>
+
+  <div id="config">
+
+    <form>
+      <div class="form-group">
+        <label>Controls</label>
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_clear" type="button" class="btn btn-warning">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Object buttons -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_object" type="button" class="btn btn-primary">Add Object</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_object_remove" type="button" class="btn btn-primary">Remove Object</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Obstacle Buttons -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_obstacle" type="button" class="btn btn-primary">Add Obstacle</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_obstacle_remove" type="button" class="btn btn-primary">Remove Obstacle</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Robots Buttons -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_add_land_robot" type="button" class="btn btn-info">Add Land Robot</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_add_aerial_robot" type="button" class="btn btn-info">Add Aerial Robot</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_remove_robot" type="button" class="btn btn-info">Remove Robot</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Save -->
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" id="filename">
+        </div>
+        <div class="input-group">
+          <div class="btn-group">
+            <button id="button_save" type="button" class="btn btn-info">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/fabric.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

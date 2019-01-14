@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="map_path" default="/home/ramonmelo/Dropbox/Ramon_Projects/ramon-mestrado/map_creator/maps_aerial/test_aerial.json"/>
+
+  <node pkg="system_manager" type="system_manager.py" name="system_manager" output="screen">
+    <param name="map_path" value="$(arg map_path)"/>
+  </node>
+
+  <include file="$(find simulation_manager)/launch/simulation.launch">
+  </include>
+
+</launch>

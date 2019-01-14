@@ -1,0 +1,14 @@
+<launch>
+
+  <include file="$(find tracking_system)/launch/real/marker_positions.launch">
+  </include>
+
+  <include file="$(find tracking_system)/launch/real/tracker_real_item.launch">
+    <arg name="item_marker_id" value="2"/>
+    <arg name="item_target_marker_id" value="10"/>
+  </include>
+
+  <include file="$(find tracking_system)/launch/real/tracker_real_obstacle.launch">
+  </include>
+
+</launch>

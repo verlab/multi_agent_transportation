@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name="item_marker_id" default="0"/>
+  <arg name="item_target_marker_id" default="0"/>
+
+  <node pkg="tracking_system" type="item_tracker.py" name="item_tracker">
+    <param name="simulation" value="false"/>
+    <param name="item_marker_id" value="$(arg item_marker_id)"/>
+  </node>
+
+  <node pkg="tracking_system" type="item_target_tracker.py" name="item_target_tracker">
+    <param name="item_target_marker_id" value="$(arg item_target_marker_id)"/>
+  </node>
+
+</launch>

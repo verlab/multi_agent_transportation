@@ -1,0 +1,47 @@
+Project Todo List:
+
+ ☐ Procurar por: hierarchical task network (HTN)
+
+
+Alocação de Tarefas:
+ ✔ Inicializar o planejamento do objeto @done
+ ✔ Segmentar o plano do objeto @done
+ ✔ Gerar o grafo de estados @done
+ ✔ Planejar o caminho dos agentes por trajeto e computar o custo @done
+ ✔ Gerar um grafo com os custos gerados pelos agentes @done (14-11-06 00:28)
+ ✔ Remover segmentos redundantes @done (14-11-07 21:53)
+ ✔ Calcular a movimentação dos robos considerando a posição do objecto como obstaculos durantes  os planejamentos @done (14-11-09 17:29)
+ ✔ Criar grafico comparativo de custos @done (14-11-09 18:46)
+ ✔ Realizar a busca no grafo por aquele de menor custo @done (14-11-09 18:46)
+ ✔ Calcular a distribuição de tarefas dentre os agentes @done (14-11-09 18:46)
+ ✔ Criar um plano completo, com o grafo minimo @done (14-11-09 18:46)
+
+Coordenação dos Agentes:
+ ✔ Iniciar controladores dos agentes @done (14-11-10 18:25)
+ ✔ Coordenar entre os agentes quem executa a tarefa por vez @done (14-11-10 18:25)
+ ✔ Realizar a movimentação por segmento @done (14-11-11 15:50)
+ ✔ Agente deve avisar quando terminou sua ação @done (14-11-11 15:50)
+ ✔ Coordenar agente usando Tokens de Pre-Moviment e Movimento, assegurar a ida do agente do próximo segmento para a preparação, enquanto o movimento de transporte é realizado @done (15-04-09 10:44)
+
+Refatoração - Revisão:
+ ✔ Modulo de Tracking @done
+ ✔ Modulo de Simulação @done
+ ✔ Modulo de Controle do Agente @done (14-11-06 00:28)
+   ✔ Controle Alto Nível - Comandos de Destino @done
+   ✔ Controle Baixo Nível - Comandos de Velocidade @done (14-11-06 00:28)
+ ✔ Modulo de Planejamento @done (15-02-02 13:32)
+ ✔ Modulo de Alocação de Tarefas @done (15-02-02 13:32)
+ ✔ Modulo de Coordenação @done (14-11-11 15:50)
+ ✔ Modulo de Criação de Ambientes @done
+
+Archive:
+ ✔ Criar controlador geral do sistema @done (14-09-15 22:49) @project(Project Todo List)
+ ✔ Adicionar metodos "cast" para classes @done (14-09-15 22:49) @project(Project Todo List)
+ ✔ Criar ambiente de teste baseado no mapa @done (14-09-09 11:47) @project(Project Todo List)
+ ✔ Create RosRobot classes @done (14-09-09 11:40) @project(All)
+ ✔ Add robot type on map creation @done (14-09-08 21:53) @project(All)
+ ✔ Modify run_me to get absolute path @done (14-09-08 21:35) @project(All)
+ ✔ Create the lib folder @done (14-09-08 21:22) @project(All)
+ ✔ Add robots to map creation @started(14-09-06 22:00) @done (14-09-06 23:04) @lasted(1:04) @project(Project Todo List / Map Creator)
+ ✔ Add the depth value as some default value @started(14-09-06 21:54) @done (14-09-06 21:56) @lasted(0:02) @project(Project Todo List / Map Creator)
+ ✔ Create method for create the configuration from file @started(14-09-06 20:26)   @done (14-09-06 20:32) @lasted(0:06) @project(Project Todo List / Utils)

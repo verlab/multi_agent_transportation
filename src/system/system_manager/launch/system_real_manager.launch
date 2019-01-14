@@ -1,0 +1,11 @@
+<launch>
+
+  <rosparam param="robot_id_list">[3,4,0]</rosparam>
+
+  <include file="$(find tracking_system)/launch/real/tracker_real.launch">
+  </include>
+
+  <node pkg="system_manager" type="system_real_manager.py" name="system_real_manager" output="screen">
+  </node>
+
+</launch>

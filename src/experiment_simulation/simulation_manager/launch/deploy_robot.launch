@@ -1,0 +1,44 @@
+<launch>
+
+  <arg name="id" default="0"/>
+  <arg name="robot_prefix" default="robot_$(arg id)" />
+  <arg name="robot_description" default="$(arg robot_prefix)_description"/>
+
+  <arg name="x" default="0.35"/>
+  <arg name="y" default="0.35"/>
+  <arg name="z" default="0.35"/>
+
+  <group ns="$(arg robot_prefix)">
+
+    <!-- <param name="$(arg robot_description)" command="$(find xacro)/xacro.py '$(find create_description)/urdf/create_gazebo.urdf.xacro'" /> -->
+
+    <!-- <param name="$(arg robot_description)_file" value="$(find simulation_manager)/model/create/model-1_4.sdf"/> -->
+
+    <node pkg="gazebo_ros" type="spawn_model" name="$(anon spawn_urdf)" respawn="false"
+          args="
+            -file $(find simulation_manager)/model/create/model-1_4.sdf
+            -sdf
+            -model $(arg robot_prefix)
+            -x $(arg x)
+            -y $(arg y)
+            -z $(arg z)
+            -unpause">
+    </node>
+
+    <!-- <node pkg="robot_state_publisher" type="robot_state_publisher" name="$(anon robot_state_publisher)" output="screen"> -->
+      <!-- <param name="publish_frequency" type="double" value="30.0" /> -->
+      <!-- <remap from="robot_description" to="$(arg robot_description)" /> -->
+    <!-- </node> -->
+
+    <!-- <node pkg="nodelet" type="nodelet" name="$(arg robot_prefix)_nodelet_manager" args="manager"/> -->
+
+    <include file="$(find agent_controller)/launch/agent_ground.launch">
+      <arg name="id" value="$(arg id)" />
+    </include>
+
+    <include file="$(find tracking_system)/launch/simulation/tracker_simulation_robot.launch">
+      <arg name="robot_prefix" value="$(arg robot_prefix)"/>
+    </include>
+
+  </group>
+</launch>

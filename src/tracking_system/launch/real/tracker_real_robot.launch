@@ -1,0 +1,10 @@
+<launch>
+
+  <arg name="robot_marker_id" default="0"/>
+
+  <node pkg="tracking_system" type="robot_tracker.py" name="robot_tracker">
+    <param name="simulation" value="false"/>
+    <param name="robot_marker_id" value="$(arg robot_marker_id)"/>
+  </node>
+
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+
+  <node
+    pkg="nautilus_manager"
+    type="planning_manager.py"
+    name="planning_manager"
+    output="screen">
+  </node>
+
+</launch>

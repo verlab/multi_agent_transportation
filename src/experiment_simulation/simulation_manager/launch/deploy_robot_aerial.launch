@@ -1,0 +1,28 @@
+<launch>
+
+  <arg name="id" default="0"/>
+  <arg name="robot_prefix" default="robot_$(arg id)" />
+
+  <arg name="x" default="0.35"/>
+  <arg name="y" default="0.35"/>
+  <arg name="z" default="0.35"/>
+
+  <group ns="$(arg robot_prefix)">
+
+    <include file="$(find hector_quadrotor_gazebo)/launch/spawn_quadrotor.launch">
+      <arg name="x" value="$(arg x)"/>
+      <arg name="y" value="$(arg y)"/>
+      <arg name="z" value="$(arg z)"/>
+      <arg name="name" value="$(arg robot_prefix)"/>
+    </include>
+
+    <include file="$(find agent_controller)/launch/agent_aerial.launch">
+      <arg name="id" value="$(arg id)" />
+    </include>
+
+    <include file="$(find tracking_system)/launch/simulation/tracker_simulation_robot.launch">
+      <arg name="robot_prefix" value="$(arg robot_prefix)"/>
+    </include>
+
+  </group>
+</launch>

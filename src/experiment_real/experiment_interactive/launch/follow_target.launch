@@ -1,0 +1,10 @@
+
+<launch>
+
+  <arg name="robot_id"/>
+
+  <node pkg="experiment_interactive" type="follow_target.py" name="$(anon follow_target)" output="screen">
+    <param name="robot_id"  value="$(arg robot_id)"/>
+  </node>
+
+</launch>

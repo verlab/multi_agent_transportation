@@ -1,0 +1,27 @@
+<launch>
+
+	<arg name="camera_node_name" default="usb_cam_node"/>
+	<arg name="camera_frame" default="usb_cam_frame"/>
+
+	<include file="$(find camera_manager)/launch/load_camera.launch">
+		<arg name="camera_node_name" value="$(arg camera_node_name)" />
+		<arg name="camera_frame" value="$(arg camera_frame)" />
+		<arg name="show_camera" value="false"/>
+	</include>
+
+	<arg name="marker_size" default="6.4" />
+	<arg name="max_new_marker_error" default="0.08" />
+	<arg name="max_track_error" default="0.2" />
+	<arg name="cam_image_topic" default="/$(arg camera_node_name)/image_raw" />
+	<arg name="cam_info_topic" default="/$(arg camera_node_name)/camera_info" />
+	<arg name="output_frame" default="/$(arg camera_frame)" />
+
+	<node
+		name="ar_track_alvar"
+		pkg="ar_track_alvar"
+		type="individualMarkersNoKinect"
+		respawn="false"
+		output="screen"
+		args="$(arg marker_size) $(arg max_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(arg cam_info_topic) $(arg output_frame)" />
+
+</launch>

@@ -1,0 +1,23 @@
+<launch>
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0.3"/>
+
+  <arg name="model_name"/>
+  <arg name="model_type"/>
+
+  <param name="$(arg model_type)_description" command="$(find xacro)/xacro.py '$(find simulation_manager)/model/$(arg model_type).urdf.xacro'" />
+
+  <node pkg="gazebo_ros" type="spawn_model" name="$(anon spawn_model)"
+    args="
+      -urdf
+      -model $(arg model_name)
+      -param $(arg model_type)_description
+      -x $(arg x)
+      -y $(arg y)
+      -z $(arg z)
+    ">
+  </node>
+
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="model_name"/>
+
+  <group ns="$(arg model_name)">
+    <node pkg="tracking_system" type="item_tracker.py" name="item_tracker">
+      <param name="model_name" value="$(arg model_name)"/>
+    </node>
+  </group>
+
+</launch>

@@ -1,0 +1,6 @@
+<launch>
+
+  <node pkg="tracking_system" type="obstacle_tracker.py" name="obstacle_tracker" output="screen">
+  </node>
+
+</launch>

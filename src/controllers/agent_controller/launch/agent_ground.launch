@@ -1,0 +1,15 @@
+
+<launch>
+
+  <arg name="id"/>
+  <arg name="robot_prefix" default="robot_$(arg id)" />
+
+  <node pkg="agent_controller" type="agent_ground_velocity.py" name="$(anon agent_ground_velocity)" output="screen">
+  </node>
+
+  <node pkg="agent_controller" type="agent_ground.py" name="$(anon agent_ground)" output="screen">
+    <param name="robot_id" value="$(arg id)"/>
+    <param name="robot_prefix" value="$(arg robot_prefix)"/>
+  </node>
+
+</launch>

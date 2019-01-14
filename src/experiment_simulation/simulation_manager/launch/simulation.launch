@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find simulation_manager)/launch/simulation_world.launch">
+  </include>
+
+  <node pkg="simulation_manager" type="world_controller.py" name="world_controller" output="screen">
+  </node>
+
+</launch>

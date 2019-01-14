@@ -1,0 +1,18 @@
+
+<launch>
+
+  <arg name="id"/>
+  <arg name="robot_prefix" default="robot_$(arg id)" />
+
+  <node pkg="agent_controller" type="agent_aerial_velocity.py" name="$(anon agent_aerial_velocity)">
+  </node>
+
+  <node pkg="agent_controller" type="agent_aerial_gripper.py" name="$(anon agent_aerial_gripper)">
+  </node>
+
+  <node pkg="agent_controller" type="agent_aerial.py" name="$(anon agent_aerial)" output="screen">
+    <param name="robot_id" value="$(arg id)"/>
+    <param name="robot_prefix" value="$(arg robot_prefix)"/>
+  </node>
+
+</launch>
